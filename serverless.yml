@@ -1,0 +1,14 @@
+service: equinox-shopify-app
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+
+functions:
+  Shopfy_Public_App:
+    handler: web/index.createServer
+    events:
+      - http: ANY /
+      
